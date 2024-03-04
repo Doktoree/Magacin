@@ -16,6 +16,9 @@ public class Artikal {
 	}
 
 	public void setNaziv(String naziv) {
+		if(naziv == null) {
+			throw new NullPointerException();
+		}
 		this.naziv = naziv;
 	}
 
@@ -24,6 +27,9 @@ public class Artikal {
 	}
 
 	public void setSifra(int sifra) {
+		if(sifra == 0) {
+			throw new NullPointerException();
+		}
 		this.sifra = sifra;
 	}
 
@@ -32,6 +38,9 @@ public class Artikal {
 	}
 
 	public void setOpis(String opis) {
+		if(opis == null) {
+			throw new NullPointerException();
+		}
 		this.opis = opis;
 	}
 
@@ -40,6 +49,9 @@ public class Artikal {
 	}
 
 	public void setKolicina(int kolicina) {
+		if(kolicina == 0) {
+			throw new NullPointerException();
+		}
 		this.kolicina = kolicina;
 	}
 	

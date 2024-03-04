@@ -4,13 +4,16 @@ import java.time.LocalDate;
 
 public class KucnaHemija extends Artikal {
 
-	LocalDate datum;
+	private LocalDate datum;
 
 	public LocalDate getDatum() {
 		return datum;
 	}
 
 	public void setDatum(LocalDate datum) {
+		if(datum == null) {
+			throw new NullPointerException();
+		}
 		this.datum = datum;
 	}
 	
